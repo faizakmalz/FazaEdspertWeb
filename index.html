@@ -1,0 +1,591 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinalProject</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="container flex flex-col mx-auto font-['Inter'] bg-[#F9F5FF]">
+    <header id="headernav" class="fixed w-full h-[80px] bg-white shadow-lg">
+        <div class="flex flex-row mx-[80px] my-[18px] justify-between">
+            <div class=" flex flex-row items-center">
+                <div class="flex flex-row w-[150px] mx-px-20 pr-[30px]">
+                    <img src="https://s3-alpha-sig.figma.com/img/ec19/eb11/bd1f6844c704ca24fd7d0d63a54c1259?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QmmkWvEcsiCymHL6PfEnrjxT-q0RKvlweadT7tQUM0rhTJkWLGw5Vgx2k6lTVblpeqxCdrLwg-v4klf-PQwnmAe85je-93GgZWhh8Eac~F17G6tUvxnzIrQqtAGIJiPb94-xrRyNV0SduLTn4NXuUSXfr8KERu0WVG~kj5ciY3km1Ex3stxJULhZX0iSMWmP1NAmtgkeUJrQkUoIvIHyCufZ7ZIko83Wp9JSJOZGtfU-PtNVmLbc8WOXknL5AR3VkdkNG-UTuItOEpsx~EkolEqZQ0SYcBNTKceQ~QtpvGTIV3NbeYD9XAW59~XktepimzkvDrdYmYN-tvQRe~wLlg__"
+                    alt="Logo edspert" class="w-full">
+                </div>
+                <div class="flex flex-row">
+                    <ul class="flex flex-row mx-8 gap-8 text-gray-900 font-['poppins'] relative">
+                        <li class="dropdown">
+                            <a class="hover:text-purple-500" href="#" onclick="toggleDropdown('dropdown1')">Home</a>
+                            <div id="dropdown1"  class= "transition-all hidden fixed bg-white shadow-lg rounded-[16px]">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown flex gap-2">
+                            <a href="#" class="hover:text-purple-500" onclick="toggleDropdown('dropdown2')">Products</a>
+                            <img class="w-[10px] h-[10px] mt-2" src="/images/chevron-down.png" alt="">
+                            <div id="dropdown2" class="dropdown-content hidden absolute bg-white shadow-lg rounded-[16px]">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 3</a>
+                            </div>
+                        
+                           
+                        </li>
+                        <li class="dropdown flex gap-2">
+                            <a href="#" class="hover:text-purple-500" onclick="toggleDropdown('dropdown3')">Resources</a>
+                            <img class="w-[10px] h-[10px] mt-2" src="/images/chevron-down.png"/>
+                            <div id="dropdown3" class="dropdown-content hidden absolute bg-white shadow-lg rounded-[16px]">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="hover:text-purple-500" onclick="toggleDropdown('dropdown4')">Pricing</a>
+                            <div id="dropdown4" class="dropdown-content hidden absolute bg-white shadow-lg rounded-[16px]">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 items-center ">
+                <button class="transition-all text-[#7F56D9] rounded-[12px] hover:bg-purple-100 px-6 py-[10px] border-2 border-gray-200 w-[120px] font-semibold">Sign Up</button>
+                    <button class="transition-all rounded-[12px] bg-[#7F56D9] hover:bg-purple-800  px-6 py-[10px] text-white w-[120px]  border-2 border-gray-200 font-semibold">Login</button>
+            </div>
+        </div>   
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container flex flex-row mx-auto justify-center" >
+                <div id="pophome" class="mx-24 my-20 flex flex-col w-[384px] h-[400px] items-center justify-center">
+                    <div id="subtitle" class="rounded-[16px] bg-[#F9F5FF] px-4 py-2" >
+                        <h2 class=" text-[16px] text-[#42307D]">Intensive Bootcamp</h2>
+                    </div>
+                    <div id="headline" class="m-5">
+                        <h1 class="text-[50px] text-center leading-none text tracking-tight font-bold text-[#42307D]">Upskill your Talent!</h1>
+                    </div><div id="subtitle2" class="">
+                        <h2 class="text-16px text-[#42307D]">Kembangkan potensimu bersama Edspert</h2>
+                    </div>
+                    <div class="m-5 flex flex-row gap-3" >
+                        <input type="search" placeholder="Search" class=" transition-all ring-purple-300 w-[320px] ring-1 shadow-inner hover:ring-1 hover:ring-purple-500 outline-none focus:ring-1 focus:ring-purple-500 focus:border-transparent rounded-[16px] px-4 py-2">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container flex flex-row mx-auto px-12 justify-center">
+                <div class="mx-4 my-12 flex flex-col w-[384px] rounded-[16px] h-[700px] 
+                border-gray-200 shadow-lg bg-white pb-[100px]">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Image desc" class="h-[50%] rounded-t-[16px]">
+                    <div class="mx-8 my-4 flex flex-col gap-1">
+                        <h1 class="text-[20px] font-semibold text-gray-900">
+                            Web development Bootcamp</h1>
+                        <h2 class="text-[16px] text-gray-500">
+                            Batch 2</h2>
+                    </div>
+                    <div class="mx-8 my-4 space-y-[18px]">
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Certified Mentor</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Integrated Module</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Class</p> 
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Community</p>            
+                        </div>
+                    </div>
+                    <div class="my-8 mx-8 flex justify-between">
+                        <s class="text-16px text-gray-500">
+                            Rp. 1.499.000
+                        </s>
+                        <p class="text-[20px] font-bold text-gray-900">
+                            Rp.899.000
+                        </p>
+                    </div>
+                    <div id="button" class="mx-8 my-2" >
+                        <button class="w-full bg-[#7F56D9] text-white px-4 py-5 rounded-[8px] hover:bg-purple-700 font-semibold">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                    
+                </div>
+            
+                <div class="mx-4 my-12 flex flex-col w-[384px] rounded-[16px] h-[700px] 
+                border-gray-200 shadow-lg bg-white pb-[100px]">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Image desc" class="h-[50%] rounded-t-[16px]">
+                    <div class="mx-8 my-4 flex flex-col gap-1">
+                        <h1 class="text-[20px] font-semibold text-gray-900">
+                            Web development Bootcamp</h1>
+                        <h2 class="text-[16px] text-gray-500">
+                            Batch 2</h2>
+                    </div>
+                    <div class="mx-8 my-4 space-y-[18px]">
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Certified Mentor</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Integrated Module</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Class</p> 
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Community</p>            
+                        </div>
+                    </div>
+                    <div class="my-8 mx-8 flex justify-between">
+                        <s class="text-16px text-gray-500">
+                            Rp. 1.499.000
+                        </s>
+                        <p class="text-[20px] font-bold text-gray-900">
+                            Rp.899.000
+                        </p>
+                    </div>
+                    <div id="button" class="mx-8 my-2" >
+                        <button class="w-full bg-[#7F56D9] text-white px-4 py-5 rounded-[8px] hover:bg-purple-700 font-semibold">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                    
+                </div>
+        
+                <div class="mx-4 my-12 flex flex-col w-[384px] rounded-[16px] h-[700px] 
+                border-gray-200 shadow-lg bg-white pb-[100px]">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Image desc" class="h-[50%] rounded-t-[16px]">
+                    <div class="mx-8 my-4 flex flex-col gap-1">
+                        <h1 class="text-[20px] font-semibold text-gray-900">
+                            Web development Bootcamp</h1>
+                        <h2 class="text-[16px] text-gray-500">
+                            Batch 2</h2>
+                    </div>
+                    <div class="mx-8 my-4 space-y-[18px]">
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Certified Mentor</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Integrated Module</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Class</p> 
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Community</p>            
+                        </div>
+                    </div>
+                    <div class="my-8 mx-8 flex justify-between">
+                        <s class="text-16px text-gray-500">
+                            Rp. 1.499.000
+                        </s>
+                        <p class="text-[20px] font-bold text-gray-900">
+                            Rp.899.000
+                        </p>
+                    </div>
+                    <div id="button" class="mx-8 my-2" >
+                        <button class="w-full bg-[#7F56D9] text-white px-4 py-5 rounded-[8px] hover:bg-purple-700 font-semibold">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div class="container flex flex-row mx-auto px-12 justify-center">
+                <div class="mx-4 my-12 flex flex-col w-[384px] rounded-[16px] h-[700px] 
+                border-gray-200 shadow-lg bg-white pb-[100px]">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Image desc" class="h-[50%] rounded-t-[16px]">
+                    <div class="mx-8 my-4 flex flex-col gap-1">
+                        <h1 class="text-[20px] font-semibold text-gray-900">
+                            Web development Bootcamp</h1>
+                        <h2 class="text-[16px] text-gray-500">
+                            Batch 2</h2>
+                    </div>
+                    <div class="mx-8 my-4 space-y-[18px]">
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Certified Mentor</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Integrated Module</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Class</p> 
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Community</p>            
+                        </div>
+                    </div>
+                    <div class="my-8 mx-8 flex justify-between">
+                        <s class="text-16px text-gray-500">
+                            Rp. 1.499.000
+                        </s>
+                        <p class="text-[20px] font-bold text-gray-900">
+                            Rp.899.000
+                        </p>
+                    </div>
+                    <div id="button" class="mx-8 my-2" >
+                        <button class="w-full bg-[#7F56D9] text-white px-4 py-5 rounded-[8px] hover:bg-purple-700 font-semibold">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                    
+                </div>
+            
+                <div class="mx-4 my-12 flex flex-col w-[384px] rounded-[16px] h-[700px] 
+                border-gray-200 shadow-lg bg-white pb-[100px]">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Image desc" class="h-[50%] rounded-t-[16px]">
+                    <div class="mx-8 my-4 flex flex-col gap-1">
+                        <h1 class="text-[20px] font-semibold text-gray-900">
+                            Web development Bootcamp</h1>
+                        <h2 class="text-[16px] text-gray-500">
+                            Batch 2</h2>
+                    </div>
+                    <div class="mx-8 my-4 space-y-[18px]">
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Certified Mentor</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Integrated Module</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Class</p> 
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Community</p>            
+                        </div>
+                    </div>
+                    <div class="my-8 mx-8 flex justify-between">
+                        <s class="text-16px text-gray-500">
+                            Rp. 1.499.000
+                        </s>
+                        <p class="text-[20px] font-bold text-gray-900">
+                            Rp.899.000
+                        </p>
+                    </div>
+                    <div id="button" class="mx-8 my-2" >
+                        <button class="w-full bg-[#7F56D9] text-white px-4 py-5 rounded-[8px] hover:bg-purple-700 font-semibold">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                    
+                </div>
+        
+                <div class="mx-4 my-12 flex flex-col w-[384px] rounded-[16px] h-[700px] 
+                border-gray-200 shadow-lg bg-white pb-[100px]">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Image desc" class="h-[50%] rounded-t-[16px]">
+                    <div class="mx-8 my-4 flex flex-col gap-1">
+                        <h1 class="text-[20px] font-semibold text-gray-900">
+                            Web development Bootcamp</h1>
+                        <h2 class="text-[16px] text-gray-500">
+                            Batch 2</h2>
+                    </div>
+                    <div class="mx-8 my-4 space-y-[18px]">
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Certified Mentor</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Integrated Module</p>            
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Class</p> 
+                        </div>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="#D1FADF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z" fill="#12B76A"/>
+                            </svg>
+                            <p class="text-[16px] text-gray-500">
+                             Online Community</p>            
+                        </div>
+                    </div>
+                    <div class="my-8 mx-8 flex justify-between">
+                        <s class="text-16px text-gray-500">
+                            Rp. 1.499.000
+                        </s>
+                        <p class="text-[20px] font-bold text-gray-900">
+                            Rp.899.000
+                        </p>
+                    </div>
+                    <div id="button" class="mx-8 my-2" >
+                        <button class="w-full bg-[#7F56D9] text-white px-4 py-5 rounded-[8px] hover:bg-purple-700 font-semibold">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page_set" class="flex justify-center mb-12 mt-4   w-[37%] h-[40px] mx-auto rounded-[16px] bg-white border-2 border-gray-200 font-regular">
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center rounded-l-[12px] justify-center items-center p-2"><p>Previous</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>1</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>2</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>3</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>...</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>8</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>9</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center justify-center items-center p-1"><p>10</p></div>
+                <div class="flex flex-1 h-full w-full border-[1px] border-gray-200 text-center rounded-r-[12px] justify-center items-center px-6"><p>Next</p></div>
+            </div>
+
+            <div class="container flex flex-col w-full bg-white mx-auto p-16 gap-3">
+                <!-- Content Lulusan dan Perusahaan -->
+                <h1 class="text-[55px] text-center mt-8 font-bold">Lulusan Edspert Bekerja <br>di Perusahaan Besar!</h1>
+                <p class="text-center">Edspert bermitra dengan startup, perusahaan multinasional, hingga unicorn
+                </p>
+                <img src="/images/companies.png" alt="Logo Perusahaan" class="w-[900px] mx-auto mt-8">
+                <h2 class="text-center text-[40px] font-semibold whitespace-nowrap overflow-hidden">Dan banyak <span class="text-[#7F56D9]">Perusahaan</span> lainnya!</h2>
+            </div>
+
+            <div class="container flex flex-col w-full bg-[#7F56D9] mx-auto p-16 gap-3 text-white">
+                <!-- Content Lulusan dan Perusahaan -->
+                <h1 class="text-[55px] text-center mt-8 font-bold">Kamu Gak Sendirian!</h1>
+                <p class="text-center">Kamu bergabung bersama komunitas member edspert yang telah merasakan manfaatnya
+                </p>
+
+                <div class="wrapper flex flex-row w-[80%] h-[600px] m-5 mx-auto justify-between gap-5 p-8">
+                    <div class="container bg-white h-full w-[35%] rounded-[16px] p-5 pt-10 shadow-md shadow-inner- border-purple-400 border-4">
+                        <img src="/images/benny.png" alt="" class="w-[300px]">
+                        <p class="text-center font-lg text-black p-1 text-[12px]">
+                            Saya lebih memahami Flutter setelah mengikuti bootcamp dari Edspert terutama di MVC-nya yang lebih sedikit state management-nya. Intinya saya sekarang lebih pede menggunakan Flutter padahal sebelumnya sering ragu ketika menggunakan widget karena belum mengerti fungsinya. Bersyukur melalui bootcamp dan latihan dari Edspert. menambah experience saya dalam menggunakan Flutter.
+                        </p>
+                    </div>
+                    <div class="container bg-white h-full w-[35%] rounded-[16px] p-5 pt-6 shadow-md shadow-inner- border-purple-400 border-4">
+                        <img src="/images/michael.png" alt="" class="w-[300px]">
+                        <p class="text-center font-lg text-black p-1 text-[12px]">
+                            Saya lebih memahami Flutter setelah mengikuti bootcamp dari Edspert terutama di MVC-nya yang lebih sedikit state management-nya. Intinya saya sekarang lebih pede menggunakan Flutter padahal sebelumnya sering ragu ketika menggunakan widget karena belum mengerti fungsinya. Bersyukur melalui bootcamp dan latihan dari Edspert. menambah experience saya dalam menggunakan Flutter.
+                        </p>
+                    </div>
+                    <div class="container bg-white h-full w-[35%] rounded-[16px] p-5 pt-6 shadow-md shadow-inner- border-purple-400 border-4">
+                        <img src="/images/ronal.png" alt="" class="w-[300px]">
+                        <p class="text-center font-lg text-black p-1 text-[12px]">
+                            Saya lebih memahami Flutter setelah mengikuti bootcamp dari Edspert terutama di MVC-nya yang lebih sedikit state management-nya. Intinya saya sekarang lebih pede menggunakan Flutter padahal sebelumnya sering ragu ketika menggunakan widget karena belum mengerti fungsinya. Bersyukur melalui bootcamp dan latihan dari Edspert. menambah experience saya dalam menggunakan Flutter.
+                        </p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <footer class="bg-white text-[16px] text-gray-500">
+                <div class="h-[500px] bg-white w-full  flex-col mx-auto">
+                    <div class="flex flex-row w-[70%] h-[75%] bg-white  justify-center mx-auto">
+                        <div class="flex flex-col p-8 gap-3 justify-center">
+                            <h2 class="text-gray-400 font-semibold text-[16px]">Product</h2>
+                            <h3>Overview</h3>
+                            <h3>Features</h3>
+                            <h3>Solutions</h3>
+                            <h3>Tutorials</h3>
+                            <h3>Pricing</h3>
+                            <h3>Releases</h3>
+                        </div>
+                        <div class="flex flex-col p-8 gap-3 justify-center">
+                            <h2 class="text-gray-400 font-semibold text-[16px]">Company</h2>
+                            <h3>About us</h3>
+                            <h3>Careers</h3>
+                            <h3>Press</h3>
+                            <h3>News</h3>
+                            <h3>Media Kit</h3>
+                            <h3>Contact</h3>
+                        </div>
+                        <div class="flex flex-col p-8 gap-3 justify-center">
+                            <h2 class="text-gray-400 font-semibold text-[16px]">Resources</h2>
+                            <h3>Blog</h3>
+                            <h3>Newsletter</h3>
+                            <h3>Events</h3>
+                            <h3>Help Centre</h3>
+                            <h3>Tutorials</h3>
+                            <h3>Support</h3>
+                        </div>
+                        <div class="flex flex-col p-8 gap-3 justify-center">
+                            <h2 class="text-gray-400 font-semibold text-[16px]">Use Cases</h2>
+                            <h3>Startups</h3>
+                            <h3>Enterprise</h3>
+                            <h3>Government</h3>
+                            <h3>SaaS</h3>
+                            <h3>Marketplace</h3>
+                            <h3>Ecommerce</h3>
+                        </div>
+                        <div class="flex flex-col p-8 gap-3 justify-center">
+                            <h2 class="text-gray-400 font-semibold text-[16px]">Social</h2>
+                            <h3>Twitter</h3>
+                            <h3>LinkedIn</h3>
+                            <h3>Facebook</h3>
+                            <h3>GitHub</h3>
+                            <h3>AngelList</h3>
+                            <h3>Dribble</h3>
+                        </div>
+                        <div class="flex flex-col p-8 gap-3 justify-center">
+                            <h2 class="text-gray-400 font-semibold text-[16px]">Legal</h2>
+                            <h3>Terms</h3>
+                            <h3>Privacy</h3>
+                            <h3>Cookies</h3>
+                            <h3>License</h3>
+                            <h3>Setting</h3>
+                            <h3>Contact</h3>
+                        </div>
+                    </div>
+                    <div class="h-[15%] w-[70%] bg-white mx-auto flex flex-1 items-center p-10"> 
+                        <img src="https://s3-alpha-sig.figma.com/img/ec19/eb11/bd1f6844c704ca24fd7d0d63a54c1259?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QmmkWvEcsiCymHL6PfEnrjxT-q0RKvlweadT7tQUM0rhTJkWLGw5Vgx2k6lTVblpeqxCdrLwg-v4klf-PQwnmAe85je-93GgZWhh8Eac~F17G6tUvxnzIrQqtAGIJiPb94-xrRyNV0SduLTn4NXuUSXfr8KERu0WVG~kj5ciY3km1Ex3stxJULhZX0iSMWmP1NAmtgkeUJrQkUoIvIHyCufZ7ZIko83Wp9JSJOZGtfU-PtNVmLbc8WOXknL5AR3VkdkNG-UTuItOEpsx~EkolEqZQ0SYcBNTKceQ~QtpvGTIV3NbeYD9XAW59~XktepimzkvDrdYmYN-tvQRe~wLlg__"
+                         alt="Logo Edspert">
+                         <h2 class="text-right text-gray-600 flex-1">2077 Untitled UI. All Rights Reserved</h2>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+            
+        
+        
+        <aside id="side">
+            <article>
+
+            </article>
+        </aside>
+
+        <div id="navigation">
+            <nav></nav>
+        </div>
+
+
+
+    </main>
+    
+   
+
+    <script src="/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
